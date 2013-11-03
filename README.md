@@ -1,4 +1,4 @@
-Mukioplayer-Py-Mac-1.200.01
+Mukioplayer-Py-Mac-1.200.02
 ===========================
 This is a solution of the damn fact that Mac, one of the best OS in human history, does not have a reliable and nice video commit software.
 
@@ -23,11 +23,7 @@ After you use it, BE SURE to input Ctrl+C in the bash window!
 Things you should know
 -----
 
-Please do not include anything besides characters or numbers in your folder or filename. There ’s no guarantee that symbols would be cool.
-
-Make sure you use Python 2.7, 3.3 won’t work for it doesn’t have some important network modules.
-
-This software is not made for playing anything above the folder “~”. Don’t get surprised if it gives you funny results.
+Directory input filtering and processing should be complete now, you should be able to add videos and xmls from any directory.
 
 I am completely new to Python and programming, so do please help me to improve this, and I would appreciate it very much.
 

@@ -67,8 +67,14 @@ def main(video_relpath, danmu_relpath):
     Process(target=http_server, ).start()
     webbrowser.open('http://localhost:8765/'+real_path+ '/mukioplayerplus.swf?file=http://localhost:8765/' + video_relpath+'&type=video&sort=new')
 
+def inputProcess(InputRaw): #defensive coding, solving cross-directory problem.
+    InputRaw.replace(" ", "")
+    if (not InputRaw.startswith('"')) and (not InputRaw.startswith("'")):
+        InputRaw = '"' + InputRaw
+    if (not InputRaw.endswith("'")) and (not InputRaw.endswith('"')):
+        InputRaw = InputRaw + '"'
+    return str(InputRaw)
 
-v_relpath = str(input('Vid'))
-X_relpath = str(input('XML'))
-
+v_relpath = inputProcess(raw_input('Input Video Path:'))
+X_relpath = inputProcess(raw_input('Input XML Path:'))
 main(v_relpath, X_relpath)
